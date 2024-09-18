@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - EcoElectricidad</title>
+    <link rel="stylesheet" href="./css/contacto.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="calculadora.html">Calculadora de Consumo</a></li>
+            <li><a href="ahorro.html">Consejos de Ahorro</a></li>
+            <li><a href="impacto.html">Impacto Ambiental</a></li>
+            <li><a href="comparador.html">Comparador</a></li>
+            <li><a href="calahorro.html">Calculadora de Ahorro</a></li>
+            <li><a href="programador.html">Programador de Ahorro</a></li>
+            <li><a href="test.html">Test</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61564309451542">Comunidad</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
+            <li><a href="./resursos.html">Recursos</a></li>
+        </ul>
+        <ul>
+          <li class="logo"><a href="./ecoelectricidad.html"><b>EcoElectricidad</b></a></li>
+          <li class="hideOnMobile"><a href="index.html">Inicio</a></li>
+          <li class="hideOnMobile"><a href="calculadora.html">Calculadora de Consumo</a></li>
+          <li class="hideOnMobile"><a href="ahorro.html">Consejos</a></li>
+          <li class="hideOnMobile"><a href="impacto.html">Impacto</a></li>
+          <li class="hideOnMobile"><a href="comparador.html">Comparador</a></li>
+          <li class="hideOnMobile"><a href="https://www.facebook.com/profile.php?id=61564309451542">Comunidad</a></li>
+          <li class="hideOnMobile"><a href="#Contacto">Contacto</a></li>
+          <li class="hideOnMobile"><a href="./resursos.html">Recursos</a></li>
+          <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+      </nav>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact-section">
+        <h1>Contáctanos</h1>
+        <p>¿Tienes preguntas, sugerencias o necesitas más información? No dudes en ponerte en contacto con nosotros. Estaremos encantados de ayudarte.</p>
+
+        <div class="contact-form-container">
+            <form action="submit_form.php" method="POST" class="contact-form">
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" name="name" required placeholder="Tu nombre">
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="Tu correo electrónico">
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje aquí"></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+
+            <div class="contact-details">
+                <h2>Información de Contacto</h2>
+                <p><strong>Email:</strong> ecoelectricidad07@gmail.com</p>
+                <p><strong>Teléfono:</strong> +51 949 553 140</p>
+                <p><strong>Dirección:</strong> Calle Asencio de Salas A-2, Trujillo, Perú</p>
+
+                <h2>Síguenos en Redes Sociales</h2>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="links">
+            <a href="index.html">Inicio</a>
+            <a href="#calculadora">Calculadora de Consumo</a>
+            <a href="#consejos">Consejos de Ahorro</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="social">
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+            <a href="https://instagram.com">Instagram</a>
+        </div>
+        <div class="contact">
+            <p>Contacto: info@ecovoltaje.com</p>
+            <form>
+                <label for="email-footer">Suscríbete a nuestro boletín:</label>
+                <input type="email" id="email-footer" name="email-footer" placeholder="Tu email">
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

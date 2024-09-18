@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Ver tu Tarifa en el Recibo de Luz - Hidrandina</title>
+    <link rel="stylesheet" href="./css/tarifas.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="calculadora.html">Calculadora de Consumo</a></li>
+            <li><a href="ahorro.html">Consejos de Ahorro</a></li>
+            <li><a href="impacto.html">Impacto Ambiental</a></li>
+            <li><a href="comparador.html">Comparador</a></li>
+            <li><a href="calahorro.html">Calculadora de Ahorro</a></li>
+            <li><a href="programador.html">Programador de Ahorro</a></li>
+            <li><a href="test.html">Test</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61564309451542">Comunidad</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./resursos.html">Recursos</a></li>
+        </ul>
+        <ul>
+          <li class="logo"><a href="./ecoelectricidad.html"><b>EcoElectricidad</b></a></li>
+          <li class="hideOnMobile"><a href="index.html">Inicio</a></li>
+          <li class="hideOnMobile"><a href="calculadora.html">Calculadora de Consumo</a></li>
+          <li class="hideOnMobile"><a href="ahorro.html">Consejos</a></li>
+          <li class="hideOnMobile"><a href="impacto.html">Impacto</a></li>
+          <li class="hideOnMobile"><a href="comparador.html">Comparador</a></li>
+          <li class="hideOnMobile"><a href="https://www.facebook.com/profile.php?id=61564309451542">Comunidad</a></li>
+          <li class="hideOnMobile"><a href="./contacto.html">Contacto</a></li>
+          <li class="hideOnMobile"><a href="./resursos.html">Recursos</a></li>
+          <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección para Identificar la Tarifa en el Recibo -->
+    <section id="tarifa-recibo" class="tariff-section">
+        <h1>Cómo Identificar tu Tarifa en el Recibo de Luz de Hidrandina</h1>
+        <p>Te mostramos dónde encontrar la opción tarifaria en tu recibo de luz de Hidrandina. Esto es importante para entender cuánto estás pagando por la electricidad y cómo se calculan tus costos mensuales.</p>
+
+        <!-- Imágenes del recibo con información destacada -->
+        <div class="tariff-info">
+            <h2>Ubicación de la Tarifa en el Recibo</h2>
+            <img src="./images/recibo.jpg" alt="Recibo de Luz de Hidrandina con la Tarifa Destacada" class="tariff-image">
+            <p>En la imagen superior, la opción tarifaria está resaltada en la sección <strong>"Opción Tarifaria"</strong>. Esta se encuentra generalmente en la parte superior del recibo, cerca de la información del titular y la dirección del suministro.</p>
+        </div>
+
+        <div class="tariff-details">
+            <h2>Detalles de la Opción Tarifaria</h2>
+            <p>La opción tarifaria indica el tipo de tarifa que se aplica a tu consumo eléctrico. Algunas de las opciones tarifarias comunes que puedes encontrar incluyen:</p>
+            <ul>
+                <li><strong>BT5B</strong>: Tarifa residencial básica.</li>
+                <li><strong>BT7</strong>: Tarifa residencial para consumos elevados.</li>
+                <li><strong>BT8</strong>: Tarifa para consumidores comerciales pequeños.</li>
+            </ul>
+            <p>Es importante conocer tu opción tarifaria para entender cómo se estructura tu factura y qué alternativas podrías tener para optimizar tu consumo eléctrico.</p>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="links">
+            <a href="index.html">Inicio</a>
+            <a href="./calculadora.html">Calculadora de Consumo</a>
+            <a href="./ahorro.html">Consejos de Ahorro</a>
+            <a href="./contacto.html">Contacto</a>
+        </div>
+        <div class="social">
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+            <a href="https://instagram.com">Instagram</a>
+        </div>
+        <div class="contact">
+            <p>Contacto: info@ecoelectricidad.com</p>
+            <form>
+                <label for="email">Suscríbete a nuestro boletín:</label>
+                <input type="email" id="email" name="email" placeholder="Tu email">
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

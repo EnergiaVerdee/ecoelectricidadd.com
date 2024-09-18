@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Consumo - EcoElectricidad</title>
+    <link rel="stylesheet" href="css/calculadora.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="calculadora.html">Calculadora de Consumo</a></li>
+            <li><a href="ahorro.html">Consejos de Ahorro</a></li>
+            <li><a href="impacto.html">Impacto Ambiental</a></li>
+            <li><a href="comparador.html">Comparador</a></li>
+            <li><a href="calahorro.html">Calculadora de Ahorro</a></li>
+            <li><a href="programador.html">Programador de Ahorro</a></li>
+            <li><a href="test.html">Test</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61564309451542">Comunidad</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./resursos.html">Recursos</a></li>
+        </ul>
+        <ul>
+          <li class="logo"><a href="./ecoelectricidad.html"><b>EcoElectricidad</b></a></li>
+          <li class="hideOnMobile"><a href="index.html">Inicio</a></li>
+          <li class="hideOnMobile"><a href="calculadora.html">Calculadora de Consumo</a></li>
+          <li class="hideOnMobile"><a href="ahorro.html">Consejos</a></li>
+          <li class="hideOnMobile"><a href="impacto.html">Impacto</a></li>
+          <li class="hideOnMobile"><a href="comparador.html">Comparador</a></li>
+          <li class="hideOnMobile"><a href="https://www.facebook.com/profile.php?id=61564309451542">Comunidad</a></li>
+          <li class="hideOnMobile"><a href="./contacto.html">Contacto</a></li>
+          <li class="hideOnMobile"><a href="./resursos.html">Recursos</a></li>
+          <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <!-- Calculadora de Consumo -->
+    <section id="calculadora" class="calculator-section">
+        <h1>Calculadora de Consumo de Electricidad</h1>
+        <p>Ingresa los detalles de tus electrodomésticos para calcular el consumo total de electricidad.</p>
+        <div class="calculator-container">
+            <form id="consumptionForm">
+                <div class="form-group">
+                    <label for="appliance">Electrodoméstico:</label>
+                    <select id="appliance" name="appliance" onchange="updateModels()">
+                        <option value="" disabled selected>Selecciona un electrodoméstico</option>
+                        <option value="Refrigeradora">Refrigeradora</option>
+                        <option value="Lavadora">Lavadora</option>
+                        <option value="Microondas">Microondas</option>
+                        <option value="TV">Televisión</option>
+                        <option value="Licuadora">Licuadora</option>
+                        <option value="Freidora">Freidora</option>
+                        <option value="Olla_Arrocera">Olla Arrocera</option>
+                        <option value="Terma">Terma</option>
+                        <option value="Cafetera">Cafetera</option>
+                        <option value="Lavavajilla">Lavavajilla</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="model">Modelo:</label>
+                    <select id="model" name="model" onchange="updatePower()">
+                        <option value="" disabled selected>Selecciona un modelo</option>
+                    </select>
+                    <li><a href="./modelo.html" class="modell">¿Cómo ver el modelo?</a></li>
+                </div>
+                <div class="form-group">
+                    <label for="power">Potencia (W):</label>
+                    <input type="number" id="power" name="power" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="hours">Horas de uso por día:</label>
+                    <input type="number" id="hours" name="hours" required>
+                </div>
+                <div class="form-group">
+                    <label for="days">Días de uso por mes:</label>
+                    <input type="number" id="days" name="days" required>
+                </div>
+                <button type="button" onclick="addAppliance()">Agregar Electrodoméstico</button>
+            </form>
+            <div class="appliance-list">
+                <h2>Lista de Electrodomésticos</h2>
+                <ul id="applianceList"></ul>
+    
+                <!-- Selección de tarifa antes del botón calcular -->
+                <div class="form-group">
+                    <label for="tariff">Selecciona tu tarifa:</label>
+                    <select id="tariff" name="tariff">
+                        <option value="" disabled selected>Selecciona una tarifa</option>
+                        <option value="BT7">BT7 Residencial</option>
+                        <option value="BT5I">BT5I Residencial</option>
+                        <option value="BT5F">BT5F Residencial</option>
+                        <option value="BT5E">BT5E Residencial</option>
+                        <option value="BT5D">BT5D Residencial</option>
+                        <option value="BT5B">BT5B Residencial</option>
+                        <!-- Añade más tarifas según sea necesario -->
+                    </select>
+                    <li><a href="./tarifas.html" class="modell">¿Cómo ver tu tarifa?</a></li>
+                </div>
+                <button type="button" onclick="calculateTotal()">Calcular Total</button>
+            </div>
+        </div>
+        <div id="totalResult" class="result"></div>
+    </section>
+
+    <section class="air-quality-map">
+        <h2>Centros de atención más cercanos</h2>
+        <div id="map">
+            <!-- El mapa interactivo será insertado aquí (por ejemplo, usando una API como Leaflet.js o Google Maps) -->
+            <p>Mapa interactivo mostrando estaciones de monitoreo</p>
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <!-- Hoja de estilos de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- JavaScript de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        // Inicializar el mapa
+        var map = L.map('map').setView([-8.140228508933875, -79.01359346180737], 13); // Coordenadas iniciales y nivel de zoom
+    
+        // Capa de mapas de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        // Añadir un marcador de ejemplo (puedes agregar más)
+        L.marker([-8.10633250342568, -79.02657875231412]).addTo(map)
+            .bindPopup('Centro de atención Trujillo')
+            .openPopup();
+        L.marker([-8.171871541741888, -79.00868197359853]).addTo(map)
+            .bindPopup('Centro de atención Moche')
+            .openPopup();
+    </script>
+
+    
+    <!-- Pie de Página -->
+    <footer>
+        <div class="links">
+            <a href="index.html">Inicio</a>
+            <a href="#calculadora">Calculadora de Consumo</a>
+            <a href="ahorro.html">Consejos de Ahorro</a>
+            <a href="./contacto.html">Contacto</a>
+        </div>
+        <div class="social">
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+            <a href="https://instagram.com">Instagram</a>
+        </div>
+        <div class="contact">
+            <p>Contacto: info@ecoelectricidad.com</p>
+            <form>
+                <label for="email">Suscríbete a nuestro boletín:</label>
+                <input type="email" id="email" name="email" placeholder="joseluisramosdiaz02@gmail.com">
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </footer>
+
+    <script src="js/calculadora.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/zwei.js"></script>
+</body>
+</html>
